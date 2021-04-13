@@ -1,0 +1,121 @@
+.header {
+  padding-top: 2rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    @include breakpoint(md) {
+      align-items: center;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 58%;
+
+    @include breakpoint(lg) {
+      flex-basis: 70%;
+    }
+    @include breakpoint(md) {
+      flex-direction: column;
+      margin-top: 0.3rem;
+      align-items: flex-end;
+    }
+  }
+
+  &__social-box {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(md) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__social-link {
+    margin-left: 1rem;
+  }
+
+  &__social {
+    height: 2.1rem;
+    width: 2.1rem;
+    fill: $color-cyan;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__phone {
+    text-decoration: none;
+    color: $color-cyan;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+
+    @include breakpoint(md) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__svg-phone {
+    height: 1.2rem;
+    width: 1.2rem;
+    fill: $color-cyan;
+    margin-right: 0.5rem;
+  }
+
+  &__mail {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-cyan;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+  }
+
+  &__svg-mail {
+    height: 1.2rem;
+    width: 1.2rem;
+    fill: $color-cyan;
+    margin-left: 0.5rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-cyan;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+
+    @include breakpoint(md) {
+      display: block;
+      align-self: flex-end;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__hamburger-icon {
+    height: 3.5rem;
+    width: 5.5rem;
+    fill: $color-cyan;
+  }
+}

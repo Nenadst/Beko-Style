@@ -1,0 +1,92 @@
+.reference {
+  margin-bottom: 4rem;
+
+  &__header-box {
+    margin-bottom: 3rem;
+    color: $color-cyan;
+  }
+
+  &__slider-box {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  &__slider {
+    width: 90%;
+    min-height: 7rem;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      min-height: 4.5rem;
+      height: 10rem;
+    }
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    left: -1%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s;
+    width: 35%;
+
+    @include breakpoint(xl) {
+      width: 50%;
+    }
+
+    @include breakpoint(lg) {
+      width: 55%;
+    }
+
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: auto;
+    min-height: 5rem;
+    // margin-left: 25rem;
+
+    @include breakpoint(md) {
+      margin-left: 7rem;
+    }
+    @include breakpoint(sm) {
+      margin-left: 0;
+    }
+  }
+
+  &__slider-btn {
+    z-index: 10;
+    border: none;
+    background: $color-white;
+    font-family: inherit;
+    color: #333;
+    height: 5rem;
+    width: 5rem;
+    font-size: 3.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      height: 10rem;
+      width: 3rem;
+    }
+  }
+
+  &__svg {
+    height: 3.5rem;
+    width: 3.5rem;
+    fill: $color-gray;
+  }
+}

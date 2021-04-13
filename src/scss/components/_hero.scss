@@ -1,0 +1,105 @@
+.hero {
+  position: relative;
+  margin-bottom: 3.5rem;
+
+  &__top {
+    background-color: $color-gray-light;
+    border-top: 2px solid $color-cornflower;
+    padding: 0.9rem 0;
+  }
+
+  &__top-span {
+    text-transform: uppercase;
+  }
+
+  &__svg {
+    height: 3.4rem !important;
+    fill: $color-white;
+    z-index: 1000000;
+  }
+
+  &__img {
+    z-index: -0;
+  }
+
+  &__banner-box {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: 1;
+    width: 63%;
+    background-color: rgba($color-black, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include breakpoint(xl) {
+      width: 83%;
+    }
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    width: 75%;
+
+    @include breakpoint(md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__header {
+    margin: 3rem 0 2rem;
+    text-transform: uppercase;
+    color: $color-white;
+    line-height: 5rem;
+
+    @include breakpoint(xl) {
+      margin: 1.5rem 0 1rem;
+      line-height: 4rem;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(xl) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__span {
+    font-size: 3rem;
+    color: $color-white;
+    line-height: 4rem;
+
+    @include breakpoint(lg) {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  &__btn {
+    border: 2px solid $color-white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: rgba($color-white, 0.5);
+    padding: 1.3rem 2.5rem;
+    margin-bottom: 2.8rem;
+
+    @include breakpoint(lg) {
+      margin-bottom: 1.5rem;
+    }
+
+    &:hover {
+      color: $color-white;
+      background-color: rgba($color-black, 0.5);
+    }
+  }
+}

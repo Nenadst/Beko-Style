@@ -1,0 +1,52 @@
+.about {
+  margin-bottom: 5rem;
+
+  &__heading-box {
+    margin-bottom: 3rem;
+    color: $color-cyan;
+  }
+
+  &__text-box {
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    font-size: 1.8rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 3rem;
+    }
+  }
+
+  &__img-box {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(md) {
+      width: 80%;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__img {
+    height: 4.5rem;
+    width: auto;
+  }
+
+  &__span {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+  }
+}

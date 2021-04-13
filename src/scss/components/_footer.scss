@@ -1,0 +1,166 @@
+.footer {
+  background-color: $color-cyan;
+  padding-top: 4rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__contact-card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 21%;
+
+    @include breakpoint(md) {
+      margin-bottom: 4rem;
+      align-items: center;
+    }
+  }
+
+  &__heading-box {
+    margin-bottom: 5rem;
+  }
+
+  &__contact-link {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $color-white;
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  &__svg {
+    height: 2.1rem;
+    width: 2.1rem;
+    fill: $color-white;
+    margin-right: 0.5rem;
+  }
+
+  &__about-card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+
+    @include breakpoint(md) {
+      margin-bottom: 4rem;
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    background-color: $color-white;
+    color: $color-cyan;
+    padding: 1.5rem 0;
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    font-weight: bold;
+    color: $color-white;
+    line-height: 3.5rem;
+  }
+
+  &__text-link {
+    color: $color-blue-light;
+  }
+
+  &__card-links {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 15%;
+
+    @include breakpoint(md) {
+      margin-bottom: 4rem;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    font-weight: bold;
+    color: $color-white;
+    margin-bottom: 2.2rem;
+    text-decoration: none;
+    border-bottom: 1px solid $color-white;
+  }
+
+  &__card-socials {
+    flex-basis: 17%;
+  }
+
+  &__social-box {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(md) {
+      margin-bottom: 4rem;
+      align-items: center;
+    }
+  }
+
+  &__svg-box {
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.8rem;
+    border-radius: 50%;
+  }
+
+  &__svg-social {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $color-blue-bahama;
+  }
+
+  &__bottom {
+    background-color: $color-heather;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__bottom-link {
+    text-decoration: none;
+    color: $color-white;
+
+    @include breakpoint(md) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__bottom-span {
+    color: $color-white;
+    padding: 0 1rem;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  &__copyright {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__copyright-text {
+    color: $color-white;
+    font-size: 1.2rem;
+  }
+}

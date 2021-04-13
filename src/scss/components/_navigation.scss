@@ -1,0 +1,126 @@
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(md) {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &:not(:first-child) {
+      @include breakpoint(lg) {
+        margin-left: 2.2rem;
+      }
+
+      @include breakpoint(md) {
+        margin-left: 0;
+        background-color: $color-cyan;
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+
+    &:hover .nav__dropdown-content {
+      display: flex;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-cyan;
+    padding: 1.3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      width: 100%;
+      border-bottom: none;
+      color: $color-white;
+      justify-content: center;
+    }
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    &:hover .nav__svg-arrow {
+      fill: $color-blue;
+    }
+  }
+
+  &__svg-arrow {
+    height: 1.9rem;
+    width: 1.9rem;
+    fill: $color-cyan;
+    margin-left: 0.2rem;
+
+    @include breakpoint(lg) {
+      width: 2.5rem;
+      margin-left: 0;
+    }
+
+    @include breakpoint(md) {
+      fill: $color-white;
+      width: 1.9rem;
+      margin-left: 0.2rem;
+    }
+  }
+
+  &__dropdown-content {
+    position: absolute;
+    top: 100%;
+    display: none;
+    flex-direction: column;
+    min-width: 22rem;
+    background-color: $color-white;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      width: 100%;
+      position: relative;
+      align-items: center;
+    }
+  }
+
+  &__dropdown-link {
+    text-decoration: none;
+    color: $color-black;
+    font-size: 1.6rem;
+    padding: 1.3rem;
+    border: 1px solid $color-onahau;
+
+    @include breakpoint(md) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    &:hover {
+      background-color: $color-onahau;
+    }
+  }
+
+  &__active {
+    @include breakpoint(md) {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.list {
+  background-color: $color-cornflower-dark;
+  padding: 3rem 0 3.5rem;
+
+  &__text-box {
+    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(md) {
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  &__text {
+    font-weight: bold;
+    margin-top: 2.5rem;
+  }
+
+  &__link-box {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+
+    @include breakpoint(lg) {
+      width: 100%;
+    }
+
+    @include breakpoint(md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-black;
+    font-weight: bold;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      margin-bottom: 3rem;
+    }
+
+    &:hover {
+      color: $color-blue-dark;
+    }
+
+    &:hover .list__span {
+      border-bottom: 1px solid $color-blue-dark;
+    }
+
+    &:hover .list__svg {
+      fill: $color-blue-dark;
+    }
+  }
+
+  &__span {
+    border-bottom: 1px solid transparent;
+  }
+
+  &__svg {
+    height: 1.9rem;
+    width: 1.9rem;
+    fill: $color-black;
+    margin-left: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+}

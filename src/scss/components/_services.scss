@@ -1,0 +1,135 @@
+.services {
+  margin-bottom: 4.5rem;
+
+  &__header-box {
+    margin-bottom: 3rem;
+    color: $color-cyan;
+  }
+
+  &__text-box {
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    font-size: 1.8rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+    }
+  }
+
+  &__card {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .services__img {
+      transform: scale(1.2);
+    }
+
+    &:hover .services__span {
+      color: $color-black;
+      background-color: $color-cornflower;
+    }
+  }
+
+  &__img {
+    transition: all 1s ease-in-out;
+  }
+
+  &__span {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: $color-white;
+    background-color: $color-cyan;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__btn-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3.8rem;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $color-cyan;
+    padding: 1.4rem 3.8rem;
+    border-color: $color-cyan;
+    background-color: $color-gray-light;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border-color: $color-cyan;
+      background-color: $color-cyan;
+      color: $color-white;
+    }
+  }
+
+  &__contact {
+    background-color: $color-cornflower-dark;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint(md) {
+      margin-bottom: 3rem;
+    }
+
+    &:hover .services__text {
+      filter: invert(40%);
+    }
+    &:hover .services__icon {
+      filter: invert(40%);
+    }
+  }
+
+  &__icon {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $color-cyan;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+}
